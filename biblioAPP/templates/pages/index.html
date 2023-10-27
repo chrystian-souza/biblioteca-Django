@@ -9,7 +9,11 @@
 </head>
 <body>
     <div> 
-        <a href="{% url 'add_product' %}">Adicionar</a>
+        
+        <div>
+            <a href="{% url 'index' produto.id %}"> {{produto.cod}} </a>
+        </div>
+        
     </div>
 </body>
 </html>
