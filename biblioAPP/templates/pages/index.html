@@ -1,4 +1,4 @@
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -10,9 +10,33 @@
 <body>
     <div> 
         
-        <div>
-            <a href="{% url 'index' produto.id %}"> {{produto.cod}} </a>
-        </div>
+        <div class="tabela">
+           
+          
+                <table>
+                    <thead>
+                        <tr>
+                           
+                            <th>Nome</th>
+                            <th>Genero</th>
+                            <th>Qtd_paginas</th>
+                            <th>Qtd_livros</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for livro in livros %}
+                        <tr>
+                            <td><a href="{% url 'livros-detail' livros.id %}"> {{livros.name}} </a></td>
+                            <td><a href="{% url 'livros-detail' livros.id %}"> {{livros.genero}} </a></td>
+                            <td><a href="{% url 'livros-detail' livros.id %}"> {{livros.qtd_paginas}} </a></td>
+                            <td><a href="{% url 'livro-detail'  livros.id %}"> {{livros.qtd_livros}} </a></td>
+                           
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+               
+            </div>
         
     </div>
 </body>

@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Nome: {{ livros.name}}</h1>
+    <h1>Preço: {{ livros.genero}}</h1>
+    <h1>Nome: {{ livros.qtd_paginas}}</h1>
+    <h1>Quantidade: {{livros.qtd_livros}}</h1>
+
+
+    <!-- <div class="img">
+    <img src="{{livros.picture.url}}" alt="">
+    <a href="{% url 'delete-product' product.id %}">Excluir</a>
+    </div>
+    <h1>{{product.picture.url}}</h1>
+     -->
+</body>
+</html>

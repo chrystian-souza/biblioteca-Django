@@ -1,8 +1,16 @@
 from django.shortcuts import render, redirect
-# from .models import Products, Categorias 
+from .models import Livros
 from random import randint
 from datetime import datetime
+from django.contrib.auth.decorators import login_required
 
-def product_detail(request, id):
-    product = Products.objects.get(id=id)
-    return render(request, 'pages/product_detail.html', {'product':product})
+
+def index(request):
+
+    livros = Livros.objects.all()
+    print(livros)
+    return render(request, 'pages/index.html', {'livros':livros})
+
+def livros_detail(request, id):
+    livros = Livros.objects.get(id=id)
+    return render(request, 'pages/livros_detail.html', {'livros':livros})
