@@ -29,7 +29,7 @@
                             <td><a href="{% url 'livros-detail' livros.id %}"> {{livros.name}} </a></td>
                             <td><a href="{% url 'livros-detail' livros.id %}"> {{livros.genero}} </a></td>
                             <td><a href="{% url 'livros-detail' livros.id %}"> {{livros.qtd_paginas}} </a></td>
-                            <td><a href="{% url 'livro-detail'  livros.id %}"> {{livros.qtd_livros}} </a></td>
+                            <td><a href="{% url 'livros-detail'  livros.id %}"> {{livros.qtd_livros}} </a></td>
                            
                         </tr>
                         {% endfor %}
