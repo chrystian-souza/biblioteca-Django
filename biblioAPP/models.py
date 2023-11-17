@@ -21,7 +21,7 @@ class Livros(models.Model):
     qtd_paginas = models.IntegerField()
     qtd_livros = models.IntegerField()
     imagem = models.ImageField(blank=False)
-    autor = models.TextField()
+    autor = models.CharField(max_length=255)
     created_at = models.DateField()
     in_stock = models.BooleanField(default=False)
 

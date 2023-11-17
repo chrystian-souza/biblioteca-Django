@@ -2,12 +2,24 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow: hidden;
 }
+
+/* static/css/styles.css */
+
+body {
+  
+    background-image: url('/media/bibliteca-fundo.jpg');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
 
 table {
 
     width: 50%;
-    background-color:rgb(243, 151, 31);
+    background-color:rgba(8, 8, 8, 0.836);
     margin-left: 25%;
     margin-top: 2%;
     border-collapse: collapse;
@@ -24,11 +36,18 @@ th {
 td {
     border: 1px solid #dcdcdc;
     padding: 8px;
-    color: black;
+    color: rgb(15, 15, 15);
     
 }
 
 a {
     text-decoration: none;
-    color: black;
+    color: rgb(248, 245, 245);
 } 
+
+.container {
+  
+    height: 100vh;
+
+   
+}
