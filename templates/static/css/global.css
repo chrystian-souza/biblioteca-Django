@@ -23,6 +23,7 @@ table {
     margin: 2rem auto;
     border-collapse: collapse;
     font-family: Arial, sans-serif;
+    border: 5px solid rgb(12, 12, 12);
 }
 
 th {
@@ -46,8 +47,11 @@ a {
 
 h1 {
 
-    font: normal 18pt Arial;
+    font: normal 30pt Arial;
     color: white;
+    background-color: rgba(222, 184, 135, 0.562);
+    border-radius: 10px;
+    border: 2px solid black;
     
 }
 

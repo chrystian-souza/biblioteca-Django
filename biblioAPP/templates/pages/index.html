@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/global.css' %}"> 
-    <title>Document</title>
+    <title>Pagina Inicial</title>
 </head>
 <body>
    
@@ -33,6 +33,7 @@
                             <th>Genero</th>
                             <th>Qtd_paginas</th>
                             <th>Qtd_livros</th>
+                            
                         </tr>
                     </thead>
                     <tbody>
@@ -42,7 +43,7 @@
                             <td><a href="{% url 'livros-detail' livro.id %}"> {{livro.genero}} </a></td>
                             <td><a href="{% url 'livros-detail' livro.id %}"> {{livro.qtd_paginas}} </a></td>
                             <td><a href="{% url 'livros-detail' livro.id %}"> {{livro.qtd_livros}} </a></td>
-                           
+                          
                         </tr>
                         {% endfor %}
                     </tbody>

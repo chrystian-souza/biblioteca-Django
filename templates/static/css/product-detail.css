@@ -1,0 +1,49 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/media/bibliteca-fundo.jpg');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100vh;
+    
+}
+
+.descricao {
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color:rgba(8, 8, 8, 0.836);
+    color: white;
+    border: 5px solid rgb(12, 12, 12);
+    max-width: 30%;
+    max-height: 100%;
+    /* margin: auto; */
+}
+
+.descricao .img img {
+
+    margin-left: 25%;
+    width: 50%;
+    /* height: auto; */
+}
+
+.descricao h1 {
+
+    font: normal 20pt Arial;
+    color: white;
+    background-color: rgba(222, 184, 135, 0.562);
+    border-radius: 10px;
+    border: 2px solid black;
+}

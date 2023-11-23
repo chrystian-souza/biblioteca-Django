@@ -5,22 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/global.css' %}"> 
-    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/product-detail.css' %}"> 
+    <title>Detalhes do livro</title>
 </head>
 <body>
 
-    <h1>Nome: {{ livros.nome}}</h1>
-    <h1>Genero: {{ livros.genero}}</h1>
-    <h1>Qtd_paginas: {{ livros.qtd_paginas}}</h1>
-    <h1>Qtd_livros: {{livros.qtd_livros}}</h1>
-
-
-    <!-- <div class="img">
-    <img src="{{livros.picture.url}}" alt="">
-    <a href="{% url 'delete-product' product.id %}">Excluir</a>
-    </div>
-    <h1>{{product.picture.url}}</h1> -->
+    <div class="descricao">
+        <h1>Nome: {{ livros.nome}}</h1>
+        <h1>Genero: {{ livros.genero}}</h1>
+        <h1>Qtd_paginas: {{ livros.qtd_paginas}}</h1>
+        <h1>Qtd_livros: {{livros.qtd_livros}}</h1> 
+        <div class="img">
+            <img src="{{livros.imagem.url}}" alt=""> 
+        </div>
     
+    </div>
+        <!-- <h1>{{livros.imagem.url}}</h1> -->
+        
 </body>
 </html>
