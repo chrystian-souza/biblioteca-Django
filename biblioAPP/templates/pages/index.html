@@ -11,6 +11,18 @@
 <body>
    
     <div class="container"> 
+        <aside>
+            <div class="input-search">
+                <form action="{% url 'search-product' %}">
+                    <input type="search" name="q">
+                    <button >Buscar</button> 
+            </div>
+            <div class="botao-add"> 
+               
+                <a class="btn" href="{% url 'add_livro' %}">Adicionar</a>
+                    
+            </div>
+        </aside>
        <div class="titulo"><h1>Tabela de Livros</h1></div>
         <div class="tabela">
                 <table>

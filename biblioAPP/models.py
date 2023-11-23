@@ -22,6 +22,8 @@ class Livros(models.Model):
     qtd_livros = models.IntegerField()
     imagem = models.ImageField(blank=False)
     autor = models.CharField(max_length=255)
+    preco = models.DecimalField(max_digits=12, decimal_places=2)
+    desconto = models.IntegerField()
     created_at = models.DateField()
     in_stock = models.BooleanField(default=False)
 
