@@ -1,0 +1,25 @@
+Sistema da biblioteca
+
+- Cadastro do livro
+
+    . Nome
+    . Gênero
+    . Qtd_paginas
+    . Qtd_livros
+    . Capa_livro
+    . Autor_livro
+    . Aluno(Quem pegou o livro)
+
+- Login
+
+    . Usuário
+    . Email
+    . Senha
+    . Repetir Senha
+    
+- Logout
+
+
+
+
+
