@@ -9,8 +9,8 @@
 
 body {
   
-    background-image: url('/media/bibliteca-fundo.jpg');
-    background-size: cover;
+    background-image: url('/media/Las-Bibliotecas-Publicas-son-necesarias-e-imprescindibles.jpg');
+    background-size:  cover;
     background-position: center; 
     background-repeat: no-repeat; 
 }
@@ -49,7 +49,7 @@ h1 {
 
     font: normal 30pt Arial;
     color: white;
-    background-color: rgba(222, 184, 135, 0.562);
+    background-color: black;
     border-radius: 10px;
     border: 2px solid black;
     
