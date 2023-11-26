@@ -16,10 +16,10 @@
         <input type="text" name="name" placeholder=" Nome">
         <select name="genero">
             {% for genero in generos %}
-            <option value="{{genero.id}} ">{{ genero.name }}</option>
+            <option value="{{genero.id}} ">{{genero.nome }}</option>
             {% endfor %}
         </select>
-        <input class="input-img" type="file" name="imagem" placeholder=" Imagem">
+        <input class="input-img" type="file" name="imagem">
         <input type="text" name="preco" placeholder=" Preco">
         <input type="text" name="descricao" placeholder=" Descricao">
         <input type="text" name="qtd_livros" placeholder=" Qtd_livros">

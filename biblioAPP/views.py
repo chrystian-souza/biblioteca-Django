@@ -37,7 +37,7 @@ def add_livro(request):
         nome = request.POST.get('nome')
         cod = randint(100, 10000)
         genero = request.POST.get('genero')
-        imagem = request.FILES.get('picture')
+        imagem = request.FILES.get('imagem')
         preco = request.POST.get('preco')
         descricao = request.POST.get('descricao')
         qtd_paginas = request.POST.get('qtd_paginas')
@@ -48,7 +48,7 @@ def add_livro(request):
 
         Livros.objects.create(
             user_id=request.user.id,
-            nome=nome, cod=cod, genero=genero, imagem=imagem,
+            name=nome, cod=cod, genero_id=genero, imagem=imagem,
             preco=preco, descricao=descricao, qtd_paginas=qtd_paginas,qtd_livros=qtd_livros, desconto=desconto,
             criado_em=criado_em, em_estoque=em_estoque
         )
