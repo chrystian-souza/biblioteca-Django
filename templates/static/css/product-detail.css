@@ -11,7 +11,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('/media/bibliteca-fundo.jpg');
+    background-image: url('/media/biblioteca-img.jpeg');
     background-size: cover;
     background-position: center; 
     background-repeat: no-repeat; 
@@ -27,7 +27,7 @@ body {
     background-color:rgba(8, 8, 8, 0.836);
     color: white;
     border: 5px solid rgb(12, 12, 12);
-    max-width: 30%;
+    max-width: 50%;
     max-height: 100%;
     /* margin: auto; */
 }
