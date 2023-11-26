@@ -29,21 +29,24 @@ body {
     border: 5px solid rgb(12, 12, 12);
     max-width: 50%;
     max-height: 100%;
+    
     /* margin: auto; */
 }
 
 .descricao .img img {
 
-    margin-left: 25%;
-    width: 50%;
-    /* height: auto; */
+    margin: auto;
+    width: 40%;
+    margin-left: 28%;
+   
+    /* height: 50%; */
 }
 
 .descricao h1 {
 
     font: normal 20pt Arial;
     color: white;
-    background-color: rgba(222, 184, 135, 0.562);
+    background-color: black;
     border-radius: 10px;
     border: 2px solid black;
 }
