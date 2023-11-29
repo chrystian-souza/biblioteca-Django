@@ -19,6 +19,14 @@ Sistema da biblioteca
     
 - Logout
 
+- Emprestimo do livro
+
+    . Vincular aluno a um livro 
+
+- Validação de segurança
+    . Assim que acessar e fazer um emprestimo do livro, receber no email a data do emprestimo do livro
+
+
 
 
 

@@ -9,7 +9,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('/media/biblioteca-img.jpeg');
+    background-image: url('/media/biblioteca-1024x683-1000x450.jpg');
     background-size: cover;
     background-position: center; 
     background-repeat: no-repeat; 
@@ -19,24 +19,16 @@ body {
 
 .container {
 
-    /* background-color:rgba(8, 8, 8, 0.836);
     display: flex;
     flex-direction: column;
-    width: 20%;
-    height: 60vh;
-    justify-content: center;
     align-items: center;
-    gap: 10px;
-    border: 5px solid rgb(12, 12, 12); */
-
-    display: flex;
-    flex-direction: column;
     gap: 10px;
     background-color:rgba(8, 8, 8, 0.836);
     color: white;
     border: 5px solid rgb(12, 12, 12);
     width: 60%;
     height: 100vh;
+
 }
 
 input {
@@ -44,6 +36,7 @@ input {
     width: 90%;
     height: 5%;
     color:black;
+    border-radius: 10px;
     
 }
 
@@ -56,6 +49,7 @@ select {
 
     width: 90%;
     height: 5%;
+    border-radius: 10px;
     
 }
 
@@ -66,22 +60,14 @@ button {
     background-color: #c8ebf7 ;
 }
 
-/* body {
-  
-    background-image: url('/media/bibliteca-fundo.jpg');
-    background-size: cover;
-    background-position: center; 
-    background-repeat: no-repeat;
-    height: 100vh; 
-    margin: auto;
-} */
 
 h1 {
 
+    display: flex;
+    justify-content: center;
     font: normal 30pt Arial;
     color: white;
     background-color: black;
     margin-bottom: 4rem;
-    padding-left: 25%;
     width: 100%;
 }
