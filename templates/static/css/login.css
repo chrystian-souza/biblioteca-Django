@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.msglogin {
+
+    font: normal 10pt Arial;
+    color: red;
+}
+
+body {
+    display: flex;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: rgb(8, 8, 8);
+}
+
+form {
+
+    display: flex;
+    color: rgb(255, 250, 250);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color:rgb(252, 247, 247);
+    width: 50%;
+    height: 100vh;
+
+}
+
+
+button {
+
+    background-color: rgb(33, 47, 236);
+    color: rgb(250, 250, 250);
+    width: 20%;
+    height: 5vh;
+    
+
+}
+
+input {
+
+    width: 50%;
+    height: 5vh;
+
+}
+/* 
+.img-login {
+
+   
+    width: 50%;
+    height: 100vh;
+    background-color: rebeccapurple;
+    margin: 0;
+    padding: 0;
+   
+} */
+
+img {
+
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+}

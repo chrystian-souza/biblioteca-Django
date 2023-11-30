@@ -13,15 +13,14 @@
 
     <form method="POST" class="container" action="" enctype="multipart/form-data"> {% csrf_token %}  
         <h1>Formulário</h1>
-        <input type="text" name="name" placeholder=" Nome">
+        <input type="text" name="nome" placeholder=" Nome">
         <select name="genero">
             {% for genero in generos %}
-            <option value="{{genero.id}} ">{{genero.nome}}</option>
+            <option value="{{genero.id}}">{{genero.nome}}</option>
             {% endfor %}
         </select>
-        <input class="input-img" type="file" name="Imagem">
+        <input class="input-img" type="file" name="imagem">
         <input type="text" name="preco" placeholder=" Preco">
-        <input type="text" name="descricao" placeholder=" Descricao">
         <input type="text" name="qtd_livros" placeholder=" Qtd_livros">
         <input type="text" name="qtd_paginas" placeholder=" Qtd_paginas">
         <input type="text" name="desconto" placeholder=" Desconto">
