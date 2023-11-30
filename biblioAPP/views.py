@@ -48,9 +48,9 @@ def add_livro(request):
 
         Livros.objects.create(
             user_id=request.user.id,
-            name=nome, cod=cod, genero_id=genero, imagem=imagem,
+            nome=nome, cod=cod, genero=genero, imagem=imagem,
             preco=preco, descricao=descricao, qtd_paginas=qtd_paginas,qtd_livros=qtd_livros, desconto=desconto,
-            criado_em=criado_em, em_estoque=em_estoque
+            created_at=criado_em, in_stock=em_estoque
         )
 
         return redirect('home')
@@ -58,4 +58,4 @@ def add_livro(request):
     else:
 
         genero = Genero.objects.all()
-        return render(request, 'pages/add_livro.html', {'genero': genero})
+        return render(request, 'pages/add_livro.html', {'generos': genero})
