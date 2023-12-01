@@ -24,7 +24,7 @@
             </div>
         </nav>
         </aside>
-       <div class="titulo"><h1>Tabela de Livros</h1></div>
+       <div class="titulo"><h1>Aluguel de livros</h1></div>
         <div class="tabela">
                 <table>
                     <thead>
@@ -50,6 +50,31 @@
                     </tbody>
                 </table>
                
+            </div>
+            <h1>Locação</h1>
+            <div class="info-emprestimo">
+                <!-- <table>
+                    <thead>
+                        <tr>
+                            <th>Usuario</th>
+                            <th>Livro</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for emprestimo in emprestimos %}
+                        <tr>
+                            <td><a href="{% url 'livros-detail' livro.id %}"> {{emprestimo.usuario}}  </a></td>
+                            <td><a href="{% url 'livros-detail' livro.id %}"> {{emprestimo.livro}}  </a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table> -->
+                <div class="descricao">
+                    <h1 class="us">Usuario: {{ emprestimos.usuario}}</h1>
+                    <h1 class="us">Livro: {{ emprestimos.livro}}</h1>
+                
+                </div>
+            
             </div>
         
     </div>

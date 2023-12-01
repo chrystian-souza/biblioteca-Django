@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Livros, Genero
+from .models import Livros, Genero, Emprestimo
 from random import randint
 from datetime import datetime
 from django.contrib.auth.decorators import login_required
@@ -59,5 +59,8 @@ def add_livro(request):
         return render(request, 'pages/add_livro.html', {'generos': genero})
     
 
-# def emprestimo(request):
+def emprestimo(request):
+
+    emprestimos = Emprestimo.objects.all()
+    return render(request, 'pages/index.html', {'emprestimos': emprestimos})
 

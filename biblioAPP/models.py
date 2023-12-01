@@ -20,7 +20,7 @@ class Livros(models.Model):
    
     nome = models.CharField(max_length=255)
     genero = models.ForeignKey(Genero, on_delete=models.CASCADE, blank=True)
-    aluno = models.ForeignKey(User, on_delete=models.CASCADE, blank=True)
+    # aluno = models.ForeignKey(User, on_delete=models.CASCADE, blank=True)
     qtd_paginas = models.IntegerField()
     qtd_livros = models.IntegerField()
     imagem = models.ImageField(blank=False)
@@ -38,6 +38,11 @@ class Livros(models.Model):
             verbose_name_plural = 'Livros'  
 
 
+class Emprestimo(models.Model):
+    usuario = models.ForeignKey(User, on_delete=models.CASCADE, blank=True)
+    livro = models.ForeignKey(Livros, on_delete=models.CASCADE, blank=True)
 
-
+    class Meta:
+        verbose_name = 'Emprestimo'
+        verbose_name_plural = 'Emprestimo'
    
