@@ -10,6 +10,7 @@ class ProductsAdmin(admin.ModelAdmin):
 
 admin.site.register(Livros, ProductsAdmin)
 admin.site.register(Genero)
+
                     
 
 # Register your models here.

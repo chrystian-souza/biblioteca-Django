@@ -4,7 +4,7 @@ from random import randint
 from datetime import datetime
 from django.contrib.auth.decorators import login_required
 
-
+@login_required(redirect_field_name='login')
 def index(request):
 
     livros = Livros.objects.all()
@@ -57,3 +57,7 @@ def add_livro(request):
 
         genero = Genero.objects.all()
         return render(request, 'pages/add_livro.html', {'generos': genero})
+    
+
+# def emprestimo(request):
+

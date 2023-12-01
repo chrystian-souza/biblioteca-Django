@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class Genero(models.Model):
@@ -13,11 +14,13 @@ class Genero(models.Model):
         verbose_name = 'Genero'
         verbose_name_plural = 'Genero' 
 
+
 class Livros(models.Model):
 
    
     nome = models.CharField(max_length=255)
     genero = models.ForeignKey(Genero, on_delete=models.CASCADE, blank=True)
+    aluno = models.ForeignKey(User, on_delete=models.CASCADE, blank=True)
     qtd_paginas = models.IntegerField()
     qtd_livros = models.IntegerField()
     imagem = models.ImageField(blank=False)
@@ -33,3 +36,8 @@ class Livros(models.Model):
     class Meta:
             verbose_name = 'Livros'
             verbose_name_plural = 'Livros'  
+
+
+
+
+   
