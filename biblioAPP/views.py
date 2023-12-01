@@ -8,7 +8,7 @@ from django.contrib.auth.decorators import login_required
 def index(request):
 
     livros = Livros.objects.all()
-    print(livros)
+    # print(livros)
     return render(request, 'pages/index.html', {'livros':livros})
 
 def livros_detail(request, id):
@@ -61,6 +61,7 @@ def add_livro(request):
 
 def emprestimo(request):
 
-    emprestimos = Emprestimo.objects.all()
-    return render(request, 'pages/index.html', {'emprestimos': emprestimos})
+    emprestimos =Emprestimo.objects.all()
+    print(emprestimos)
+    return render(request, 'pages/teste.html', {'emprestimos': emprestimos})
 

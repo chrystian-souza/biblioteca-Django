@@ -1,3 +1,4 @@
+
 {% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -10,16 +11,16 @@
 </head>
 <body>
 
-    <div class="descricao">
-        <h1>Nome: {{ livros.nome}}</h1>
-        <h1>Genero: {{ livros.genero}}</h1>
-        <h1>Qtd_paginas: {{ livros.qtd_paginas}}</h1>
-        <h1>Qtd_livros: {{livros.qtd_livros}}</h1> 
-        <div class="img">
-            <img src="{{livros.imagem.url}}" alt=""> 
-        </div>
+    <div class="info-emprestimo">
+    <h1>Locação</h1>
 
+        {% for emprestimo in emprestimos %}
+        <p>Usuário: {{ emprestimo.usuario.username }} pegou emprestado o livro: {{ emprestimo.livro.nome }}</p>
+        {% endfor %}
+        
     </div>
+    
         
 </body>
 </html>
+

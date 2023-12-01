@@ -45,4 +45,7 @@ class Emprestimo(models.Model):
     class Meta:
         verbose_name = 'Emprestimo'
         verbose_name_plural = 'Emprestimo'
+    
+    def __str__(self):
+        return f"{self.usuario.username} pegou emprestado {self.livro.nome}"
    
