@@ -1,26 +1,28 @@
-
+{%load static%}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-  
-    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <title>Register</title>
 </head>
 <body>
    
-    <form action="" method="POST"> {% csrf_token %}
+    <div class="img-login">
+        <img src="../../../media/2fa.jpg" width="200px" height="200px">
+    </div>
+  
+        <form action="" method="POST"> {% csrf_token %}
 
-        
-        <input type="text" name="username" id="" placeholder=" Usuário"> 
-        <input type="email" name="email" id="" placeholder=" Email"> 
-        <input type="password" name="password" placeholder=" Senha">
-        <input type="password" name="repeat-password" placeholder="Repeat-password">
-        <button type="submit">Cadastrar</button>
+            <input type="text" name="username" id="" placeholder=" Usuário"> 
+            <input type="email" name="email" id="" placeholder=" Email"> 
+            <input type="password" name="password" placeholder=" Senha">
+            <input type="password" name="repeat-password" placeholder="Repeat-password">
+            <button type="submit">Cadastrar</button>
 
-    </form>
+        </form>
     
 </body>
 </html>
