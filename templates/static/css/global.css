@@ -1,9 +1,9 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     overflow: hidden;
-}
+} */
 
 /* static/css/styles.css */
 
@@ -15,10 +15,48 @@ body {
     background-repeat: no-repeat; 
 }
 
-nav {
+/* nav {
+
+    display: flex;
+    justify-content: space-evenly;
     background-color: rgb(1, 39, 72);
     width: 100%;
     height: 60px;
+} */
+
+form {
+
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    /* margin: 20px; */
+}
+
+form input {
+
+    width: 20rem;
+    border-radius: 10px;
+    height: 2rem;
+    
+}
+
+form button{
+
+    width: 5rem;
+    background-color: rgb(48, 157, 207);
+    border-radius: 10px;
+    height: 2rem;
+    cursor: pointer;
+}
+
+.btn {
+
+    width: 5rem;
+    border-radius: 10px;
+    height: 2rem;
+    background-color: green;
+    cursor: pointer;
+
 }
 
 table {
@@ -68,11 +106,7 @@ h1 {
     margin-top: 2rem;
 }
 
-.container {
-  
-    height: 100vh;
-   
-}
+
 
 /* .descricao {
 

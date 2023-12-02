@@ -5,27 +5,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/global.css' %}"> 
     <title>Pagina Inicial</title>
 </head>
 <body>
-   <nav>
-    <div class="container"> 
-        <aside>
-            <div class="input-search">
-                <form action="{% url 'search-product' %}">
-                    <input type="search" name="q">
-                    <button >Buscar</button> 
-            </div>
-            <div class="botao-add"> 
-               
-                <a class="btn" href="{% url 'add_livro' %}">Adicionar</a>
-                    
-            </div>
-        </nav>
-        </aside>
+   <!-- <nav>
+        <form action="{% url 'search-product' %}">
+           <div> <input type="search" name="q">
+           <button >Buscar</button></div>
+          <div class="btn">Adicionar<a  href="{% url 'add_livro' %}"></a></div> 
+    </nav>
        <div class="titulo"><h1>Aluguel de livros</h1></div>
-        <div class="tabela">
+        <div class="tabela"> -->
+
+            <nav class="navbar bg-body-tertiary">
+                <div class="container-fluid">
+                  <a class="navbar-brand">Navbar</a>
+                  <form class="d-flex" role="search">
+                    <input class="form-control me-5" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success form-control me 1" type="submit">Buscar</button>
+                    <a class="btn text-black" href="{% url 'add_livro' %}">Adicionar</a>
+                  </form>
+                </div>
+              </nav>
                 <table>
                     <thead>
                         <tr>
