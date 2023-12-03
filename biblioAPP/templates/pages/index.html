@@ -10,6 +10,7 @@
     <title>Pagina Inicial</title>
 </head>
 <body>
+    
    <!-- <nav>
         <form action="{% url 'search-product' %}">
            <div> <input type="search" name="q">
@@ -25,10 +26,13 @@
                   <form class="d-flex" role="search">
                     <input class="form-control" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-dark" type="submit">Buscar</button>
+                        {% if user.is_authenticated and user.is_staff %}
                     <a class="btn btn-outline-success" href="{% url 'add_livro' %}">Adicionar+</a>
+                        {% endif %}
                   </form>
                 </div>
               </nav>
+              <h4>Bem vindo: {{user}} </h4>
                 <table>
                     <thead>
                         <tr>
@@ -54,8 +58,6 @@
                 </table>
                
             </div>
-           
-           
-    
+          
 </body>
 </html>
