@@ -36,12 +36,25 @@ form {
 
 button {
 
-    background-color: rgb(33, 47, 236);
+    background-color: rgb(236, 33, 33);
     color: rgb(250, 250, 250);
     width: 20%;
     height: 5vh;
-    
+    cursor: pointer;
+}
 
+a {
+
+    background-color: rgb(33, 77, 236);
+    color: rgb(250, 250, 250);
+    width: 20%;
+    height: 5vh;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; /* Remova sublinhado padrão de links */
+   
 }
 
 input {

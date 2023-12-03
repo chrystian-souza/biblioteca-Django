@@ -3,6 +3,8 @@ from .models import Livros, Genero, Emprestimo
 from random import randint
 from datetime import datetime
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.views import LogoutView
+
 
 @login_required(redirect_field_name='login')
 def index(request):
@@ -19,6 +21,7 @@ def search_product(request):
     q = request.GET.get('q')
     livros = Livros.objects.filter(name__icontains=q) 
     return render(request, 'pages/index.html', {'livros':livros})
+
 
 # def delete_product(request, id):
 #     product = Products.objects.get(id=id)

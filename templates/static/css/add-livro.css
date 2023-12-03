@@ -9,11 +9,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('/media/biblioteca-1024x683-1000x450.jpg');
-    background-size: cover;
-    background-position: center; 
-    background-repeat: no-repeat; 
     height: 100vh;
+    background-color: black;
     
 }
 
@@ -25,7 +22,7 @@ body {
     gap: 10px;
     background-color:rgba(8, 8, 8, 0.836);
     color: white;
-    border: 5px solid rgb(12, 12, 12);
+    border: 5px solid #000099;
     width: 60%;
     height: 100vh;
 

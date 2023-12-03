@@ -13,20 +13,21 @@
     <div class="img-login">
         <img src="../../../media/2fa.jpg" width="200px" height="200px">
     </div>
-  
+       
         <form action="" method="POST"> {% csrf_token %}
-
+           
             {% if messages %}
             {% for message in messages %}
             <h3 class="msglogin">{{message}}</h3>
             {% endfor %}
             {% endif %}
+            <h1>Login</h1>
             <span>Usuário</span>
             <input type="text" name="username" id="" placeholder=" Usuário"> 
             <span>Senha</span>
             <input type="password" name="password" placeholder=" Senha">
             <button type="submit">Entrar</button>
-
+            <a href="{% url 'register' %}">Registrar</a>
         </form>
  
 </body>

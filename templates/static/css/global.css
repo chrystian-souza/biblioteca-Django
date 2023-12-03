@@ -9,10 +9,7 @@
 
 body {
   
-    background-image: url('/media/Las-Bibliotecas-Publicas-son-necesarias-e-imprescindibles.jpg');
-    background-size:  cover;
-    background-position: center; 
-    background-repeat: no-repeat; 
+   background-color: black;
 }
 
 /* nav {
@@ -66,7 +63,7 @@ table {
     margin: 2rem auto;
     border-collapse: collapse;
     font-family: Arial, sans-serif;
-    border: 5px solid rgb(12, 12, 12);
+    border: 5px solid #000099;
 }
 
 th {
@@ -132,8 +129,9 @@ h1 {
 }
 
 h4 {
-    background-color: rgb(3, 194, 26);
-    width: 12rem;
+   
+    color: white;
+    width: 15rem;
    
 }
 

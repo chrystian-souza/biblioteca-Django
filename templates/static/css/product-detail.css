@@ -11,10 +11,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('/media/biblioteca-img.jpeg');
-    background-size: cover;
-    background-position: center; 
-    background-repeat: no-repeat; 
+    background-color: black;
     height: 100vh;
     
 }
@@ -26,12 +23,10 @@ body {
     gap: 10px;
     background-color:rgba(8, 8, 8, 0.836);
     color: white;
-    border: 5px solid rgb(12, 12, 12);
+    border: 5px solid #000099;
     max-width: 50%;
     max-height: 100%;
-    
-    /* margin: 10px auto; */
-   
+
 }
 
 .descricao .img img {
@@ -39,8 +34,6 @@ body {
     margin: auto;
     width: 40%;
     margin-left: 28%;
-   
-    /* height: 50%; */
 }
 
 .descricao h1 {

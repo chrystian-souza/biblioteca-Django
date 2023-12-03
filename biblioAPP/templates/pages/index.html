@@ -29,6 +29,8 @@
                         {% if user.is_authenticated and user.is_staff %}
                     <a class="btn btn-outline-success" href="{% url 'add_livro' %}">Adicionar+</a>
                         {% endif %}
+                    <a class="btn btn-outline-danger" href="{% url 'login' %}">Sair</a>
+    
                   </form>
                 </div>
               </nav>
