@@ -9,57 +9,48 @@
     <link rel="stylesheet" href="{% static 'css/global.css' %}"> 
     <title>Pagina Inicial</title>
 </head>
-<body>
-    
-   <!-- <nav>
-        <form action="{% url 'search-product' %}">
-           <div> <input type="search" name="q">
-           <button >Buscar</button></div>
-          <div class="btn">Adicionar<a  href="{% url 'add_livro' %}"></a></div> 
-    </nav>
-       <div class="titulo"><h1>Aluguel de livros</h1></div>
-        <div class="tabela"> -->
+<body> 
+    <nav class="navbar bg-body-tertiary ">
+        <div class="container-fluid me-3 p-3">
+            <a class="navbar-brand">Biblioteca Online</a>
+            <form class="d-flex" role="search">
+            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-dark" type="submit">Buscar</button>
+                {% if user.is_authenticated and user.is_staff %}
+            <a class="btn btn-outline-success" href="{% url 'add_livro' %}">Adicionar+</a>
+                {% endif %}
+            <a class="btn btn-outline-danger" href="{% url 'login' %}">Sair</a>
 
-            <nav class="navbar bg-body-tertiary ">
-                <div class="container-fluid me-3 p-3">
-                  <a class="navbar-brand">Biblioteca Online</a>
-                  <form class="d-flex" role="search">
-                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-dark" type="submit">Buscar</button>
-                        {% if user.is_authenticated and user.is_staff %}
-                    <a class="btn btn-outline-success" href="{% url 'add_livro' %}">Adicionar+</a>
-                        {% endif %}
-                    <a class="btn btn-outline-danger" href="{% url 'login' %}">Sair</a>
+            </form>
+        </div>
+        </nav>
+        <h4>Bem vindo: {{user}} </h4>
+        <table>
+            <h1 class="titulo">Escolha um livro</h1>
+            <thead>
+                <tr>
+                    
+                    <th>Nome</th>
+                    <th>Genero</th>
+                    <th>Qtd_paginas</th>
+                    <th>Qtd_livros</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                {% for livro in livros %}
+                <tr>
+                    <td><a href="{% url 'livros-detail' livro.id %}"> {{livro.nome}} </a></td>
+                    <td><a href="{% url 'livros-detail' livro.id %}"> {{livro.genero}} </a></td>
+                    <td><a href="{% url 'livros-detail' livro.id %}"> {{livro.qtd_paginas}} </a></td>
+                    <td><a href="{% url 'livros-detail' livro.id %}"> {{livro.qtd_livros}} </a></td>
+                    
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+    </div>
     
-                  </form>
-                </div>
-              </nav>
-              <h4>Bem vindo: {{user}} </h4>
-                <table>
-                    <thead>
-                        <tr>
-                           
-                            <th>Nome</th>
-                            <th>Genero</th>
-                            <th>Qtd_paginas</th>
-                            <th>Qtd_livros</th>
-                            
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for livro in livros %}
-                        <tr>
-                            <td><a href="{% url 'livros-detail' livro.id %}"> {{livro.nome}} </a></td>
-                            <td><a href="{% url 'livros-detail' livro.id %}"> {{livro.genero}} </a></td>
-                            <td><a href="{% url 'livros-detail' livro.id %}"> {{livro.qtd_paginas}} </a></td>
-                            <td><a href="{% url 'livros-detail' livro.id %}"> {{livro.qtd_livros}} </a></td>
-                          
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-               
-            </div>
-          
 </body>
 </html>

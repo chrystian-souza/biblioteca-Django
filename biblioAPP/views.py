@@ -28,11 +28,11 @@ def search_product(request):
 #     product.delete()
 #     return redirect('home')
 
-# def sell_product(request, id):
-#     product = Products.objects.get(id=id)
-#     product.qtd -= 1
-#     product.save()
-#     return redirect('product-detail', id)
+def sell_product(request, id):
+    product = Livros.objects.get(id=id)
+    product.qtd -= 1
+    product.save()
+    return redirect('index', id)
 
 def add_livro(request):
 
