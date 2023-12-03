@@ -11,7 +11,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: black !important;
     height: 100vh;
     
 }
@@ -20,20 +20,21 @@ body {
 
     display: flex;
     flex-direction: column;
+    text-align: center;
     gap: 10px;
     background-color:rgba(8, 8, 8, 0.836);
     color: white;
     border: 5px solid #000099;
-    max-width: 50%;
-    max-height: 100%;
+    /* max-width: 50%; */
+    /* max-height: 100vh; */
 
 }
 
 .descricao .img img {
 
-    margin: auto;
+    /* margin: auto; */
     width: 40%;
-    margin-left: 28%;
+    /* margin-left: 28%; */
 }
 
 .descricao h1 {
