@@ -14,8 +14,8 @@ def index(request):
     return render(request, 'pages/index.html', {'livros':livros})
 
 def livros_detail(request, id):
-    livros = Livros.objects.get(id=id)
-    return render(request, 'pages/livros_detail.html', {'livros':livros})
+    livro = Livros.objects.get(id=id)
+    return render(request, 'pages/livros_detail.html', {'livro':livro})
 
 def search_product(request):
     q = request.GET.get('q')
@@ -28,11 +28,17 @@ def search_product(request):
 #     product.delete()
 #     return redirect('home')
 
-def sell_product(request, id):
-    product = Livros.objects.get(id=id)
-    product.qtd -= 1
-    product.save()
-    return redirect('index', id)
+def rent_product(request, id):
+    livro = Livros.objects.get(id=id)
+    livro.qtd_livros -= 1
+    livro.save()
+    return redirect('home')
+
+def return_product(request, id):
+    livro = Livros.objects.get(id=id)
+    livro.qtd_livros += 1
+    livro.save()
+    return redirect('home')
 
 def add_livro(request):
 

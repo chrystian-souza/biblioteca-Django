@@ -3,10 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+
+  
+}
 
 .info-emprestimo {
 
     display: flex;
     flex-direction: column;
-    color: white;
+    color: rgb(9, 9, 9);
 }

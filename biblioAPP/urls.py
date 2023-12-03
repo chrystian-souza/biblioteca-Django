@@ -6,9 +6,10 @@ from django.contrib.auth.views import LogoutView
 
 urlpatterns = [
     path('', views.index, name='home'),
-    path('search-product/', views.search_product, name='search-product'),
+    path('search-product/', views.search_product, name='search_product'),
     path('add-livro/', views.add_livro, name='add_livro'),
-    path('sell-product/<int:id>/', views.sell_product, name='sell-product'),
+    path('rent-product/<int:id>/', views.rent_product, name='rent_product'),
+    path('return-product/<int:id>/', views.return_product, name='return_product'),
     path('livros_detail/<int:id>', views.livros_detail, name='livros-detail'),
     path('teste/', views.emprestimo, name='teste'),
     path('logout/',  LogoutView.as_view(), name='logout'),

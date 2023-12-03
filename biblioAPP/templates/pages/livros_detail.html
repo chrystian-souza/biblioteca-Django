@@ -11,15 +11,22 @@
 <body>
 
     <div class="descricao">
-        <h1>Nome: {{ livros.nome}}</h1>
-        <h1>Genero: {{ livros.genero}}</h1>
-        <h1>Qtd_paginas: {{ livros.qtd_paginas}}</h1>
-        <h1>Qtd_livros: {{livros.qtd_livros}}</h1> 
+        <h1>Nome: {{ livro.nome}}</h1>
+        <h1>Genero: {{ livro.genero}}</h1>
+        <h1>Qtd_paginas: {{ livro.qtd_paginas}}</h1>
+        <h1>Qtd_livros: {{livro.qtd_livros}}</h1> 
         <div class="img">
-            <img src="{{livros.imagem.url}}" alt=""> 
+            <img src="{{livro.imagem.url}}" alt=""> 
         </div>
         <div class="botoes">
-            <a href="{% url 'teste' %}">Alugar</a>
+            {% if livro.id %}
+            <a href="{% url 'rent_product' livro.id %}">Alugar</a>
+            <a href="{% url 'return_product' livro.id %}">Devolver</a>
+            
+           
+            {% else %}
+            <span>Informações do livro não disponíveis</span>
+            {% endif %}
             <a href="">Voltar</a>
         </div>
         
