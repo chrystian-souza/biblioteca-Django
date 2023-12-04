@@ -41,6 +41,8 @@ class Livros(models.Model):
 class Emprestimo(models.Model):
     usuario = models.ForeignKey(User, on_delete=models.CASCADE, blank=True)
     livro = models.ForeignKey(Livros, on_delete=models.CASCADE, blank=True)
+    data_emprestimo = models.DateTimeField(auto_now_add=True)
+    data_devolucao = models.DateTimeField(null=True, blank=True)
 
     class Meta:
         verbose_name = 'Emprestimo'
@@ -48,4 +50,8 @@ class Emprestimo(models.Model):
     
     def __str__(self):
         return f"{self.usuario.username} pegou emprestado {self.livro.nome}"
+    
+    def devolver_livro(self):
+        self.data_devolucao = timezone.now()
+        self.save()
    

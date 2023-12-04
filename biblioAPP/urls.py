@@ -12,7 +12,9 @@ urlpatterns = [
     path('return-product/<int:id>/', views.return_product, name='return_product'),
     path('livros_detail/<int:id>', views.livros_detail, name='livros-detail'),
     path('teste/', views.emprestimo, name='teste'),
+    path('sucesso/<int:livro_id>/', views.alugar_livro, name='sucesso'),
     path('logout/',  LogoutView.as_view(), name='logout'),
+    path('livros_detail/', views.index, name='voltar')
     # path('delete-product/<int:id>/', views.delete_product, name='delete-product')
 
 
