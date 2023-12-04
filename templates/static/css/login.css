@@ -15,7 +15,6 @@ body {
     color: black;
     justify-content: center;
     align-items: center;
-    
     background-color: rgb(8, 8, 8);
 }
 
@@ -30,6 +29,11 @@ form {
     background-color:rgb(252, 247, 247);
     width: 50%;
     height: 100vh;
+    /* width: 100%; */
+    max-width: 400px;
+    margin: auto; 
+    padding: 20px;
+    box-sizing: border-box;
 
 }
 
@@ -38,7 +42,7 @@ button {
 
     background-color: rgb(236, 33, 33);
     color: rgb(250, 250, 250);
-    width: 20%;
+    width: 6rem;
     height: 5vh;
     cursor: pointer;
 }
@@ -47,7 +51,7 @@ a {
 
     background-color: rgb(33, 77, 236);
     color: rgb(250, 250, 250);
-    width: 20%;
+    width: 6rem;
     height: 5vh;
     border: 2px solid black;
     display: flex;
@@ -81,4 +85,20 @@ img {
     padding: 0;
     width: 100%;
     height: 100vh;
+}
+
+@media (max-width:600px) {
+
+    .img-login img {
+
+        display: none;
+    }
+
+    form {
+
+        width: 100%;
+    }
+
+
+    
 }
